@@ -5,7 +5,7 @@ void main()
   fp=fopen("riderslist.odt","w+");    //write or append,im not sure
   if(fp==NULL)
   {
-    PRINTF("could not open file/n");
+    printf("could not open file\n");
     exit(0);
   }
   int user,des,ridecount=0;            //variable to store type of user,destination and ridecount=no. of rides
@@ -14,14 +14,15 @@ void main()
   scanf("%d",&user);
   if(user==1)
   {
-    printf("Select destination : 1-Kannur/n");
+    printf("Select destination : 1-Kannur\n");
     scanf("%d,&des);
-    printf("Select exact destination : 1-Keecheri/n 2-Puthiyatheru/n 3-Pallikunnu/n 4-Caltex/n 5-Plaza/n");
+    printf("Select exact destination : 1-Keecheri\n 2-Puthiyatheru\n 3-Pallikunnu\n 4-Caltex\n 5-Plaza\n");
+    scanf("%d".&exactdes);
     //add this to our riderslist file
   }
   if(user==2)
   {
-    printf("Where to? : 1-Keecheri/n 2-Puthiyatheru/n 3-Pallikunnu/n 4-Caltex/n 5-Plaza/n");
+    printf("Where to? : 1-Keecheri\n 2-Puthiyatheru\n 3-Pallikunnu\n 4-Caltex\n 5-Plaza\n");
     //compare this to the entry in file
     //if(this=that) ==> ridecount=ridecount+1
     printf("you have %d rider to take you to your destination/n",ridecount);
