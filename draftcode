@@ -1,0 +1,30 @@
+#include<stdio.h>
+void main()
+{
+  FILE *fp;
+  fp=fopen("riderslist.odt","w+");    //write or append,im not sure
+  if(fp==NULL)
+  {
+    PRINTF("could not open file/n");
+    exit(0);
+  }
+  int user,des,ridecount=0;            //variable to store type of user,destination and ridecount=no. of rides
+  printf("Press 1 if you are a rider 
+          Press 2 if you are a pooler\n");
+  scanf("%d",&user);
+  if(user==1)
+  {
+    printf("Select destination : 1-Kannur/n");
+    scanf("%d,&des);
+    printf("Select exact destination : 1-Keecheri/n 2-Puthiyatheru/n 3-Pallikunnu/n 4-Caltex/n 5-Plaza/n");
+    //add this to our riderslist file
+  }
+  if(user==2)
+  {
+    printf("Where to? : 1-Keecheri/n 2-Puthiyatheru/n 3-Pallikunnu/n 4-Caltex/n 5-Plaza/n");
+    //compare this to the entry in file
+    //if(this=that) ==> ridecount=ridecount+1
+    printf("you have %d rider to take you to your destination/n",ridecount);
+    printf("press1 to proceed ==>");
+    //maybe give them the details of the rider which we collect when the rider registers his ride...we can ask him some personal information as well like name,phone number etc.
+    //later in our app, we can ask the user to create a profile so that they dont have to guve their info everytime.
